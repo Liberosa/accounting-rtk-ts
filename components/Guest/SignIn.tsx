@@ -20,8 +20,8 @@ const SignIn = () => {
             </label>
             <label>Password:
                 <input type="password"
-                onChange={(e) => setPassword(e.target.value)}
-                value={password}/>
+                       onChange={(e) => setPassword(e.target.value)}
+                       value={password}/>
             </label>
             <button onClick={handleClickSignIn}>Sign in</button>
             <button onClick={handleClickClear}>Clear</button>
