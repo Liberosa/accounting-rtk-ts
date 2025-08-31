@@ -10,7 +10,7 @@ const Guest = () => {
             {isSignedIn ? <SignIn/> :<SignUp/>}
             <button
                 onClick={() => setIsSignedIn(prevState =>!prevState)}
-            > Switch to{isSignedIn ? 'Sign up' : 'Sign in'}</button>
+            > Switch to {isSignedIn ? 'Sign up' : 'Sign in'}</button>
         </div>
     );
 };

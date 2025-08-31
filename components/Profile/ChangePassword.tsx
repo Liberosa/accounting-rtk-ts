@@ -11,9 +11,10 @@ const ChangePassword = ({close}: ChangePasswordProps) => {
     const [newPassword, setNewPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const dispatch = useAppDispatch();
+
     const handleClickSave = () => {
         if (newPassword === confirmPassword) {
-            dispatch(changePassword(newPassword));
+            dispatch(changePassword({newPassword, oldPassword}));
             close();
         } else {
             alert('Passwords do not match');

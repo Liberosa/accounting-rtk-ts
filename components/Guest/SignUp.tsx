@@ -34,13 +34,13 @@ const SignUp = () => {
             <label>First name:
                 <input type="text"
                        onChange={(e) => setFirstName(e.target.value)}
-                       value={login}/>
+                       value={firstName}/>
 
             </label>
             <label>Last name:
                 <input type="text"
                        onChange={(e) => setLastName(e.target.value)}
-                       value={login}/>
+                       value={lastName}/>
 
             </label>
             <button onClick={handleClickSignUp}>Sign in</button>
