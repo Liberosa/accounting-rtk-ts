@@ -3,12 +3,16 @@ import {UpdateMode} from "../../utils/types.d";
 import ChangePassword from "./ChangePassword.tsx";
 import EditProfile from "./EditProfile.tsx";
 
-const UpdateUser = () => {
+interface LoginProps {
+    login: string;
+}
+
+const UpdateUser = ({login}: LoginProps) => {
     const [updateMode, setUpdateMode] = useState(UpdateMode.DEFAULT);
 
     switch (updateMode) {
         case UpdateMode.EDIT_PROFILE:
-            return <EditProfile close={() => setUpdateMode(UpdateMode.DEFAULT)}/>;
+            return <EditProfile login={login} close={() => setUpdateMode(UpdateMode.DEFAULT)}/>;
         case UpdateMode.CHANGE_PASSWORD:
             return <ChangePassword close={() => setUpdateMode(UpdateMode.DEFAULT)}/>;
         default:
